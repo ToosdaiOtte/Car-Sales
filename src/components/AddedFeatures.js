@@ -1,8 +1,10 @@
 import React from 'react';
 
 import AddedFeature from './AddedFeature';
+import { VirtualAction } from 'rxjs';
 
 const AddedFeatures = props => {
+  console.log(props);
 
   const addedFeatures = props.car.features;
 

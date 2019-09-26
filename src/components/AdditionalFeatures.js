@@ -2,8 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AdditionalFeature from './AdditionalFeature';
 import Total from './Total';
+import { addFeatureAC } from '../actions';
 
 const AdditionalFeatures = props => {
+
+  const buyItem = item => {
+
+    // dipsatch an action here to add an item
+  };
 
   return (
     <div className="content">
@@ -12,11 +18,11 @@ const AdditionalFeatures = props => {
         <div>
         <ol type="1">
           {props.features.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+            <AdditionalFeature key={item.id} feature={item} buyItem={buyItem} />
           ))}
         </ol>
         <div>
-          <Total car={props.car} />
+          <Total carState={props.carState} />
         </div>
         </div>
       ) : (
@@ -27,14 +33,15 @@ const AdditionalFeatures = props => {
 };
 
 const mapStateToProps = state => {
-  console.log('mSTP additionalFeatures state:', state);
+  console.log('mSTP additionalFeatures state:', state.carState.store);
   return {
-    car: state.car,
-    features: state.feature.store
+    carState: state.carState,
+    features: state.carState.store,
+    car: state.carState.car
   };
 };
 
 export default connect(
   mapStateToProps,
-  {}
+  { addFeatureAC }
 )(AdditionalFeatures);

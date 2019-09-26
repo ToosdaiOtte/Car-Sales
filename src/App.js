@@ -11,9 +11,9 @@ const App = () => {
     // dispatch an action here to remove an item
   };
 // reducer case
-  const buyItem = item => {
-    // dipsatch an action here to add an item
-  };
+  // const buyItem = item => {
+  //   // dipsatch an action here to add an item
+  // };
 
   return (
     <div className="boxes">
