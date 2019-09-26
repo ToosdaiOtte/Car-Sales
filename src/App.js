@@ -6,11 +6,11 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 
 const App = () => {
 
-  // reducer case
-  const removeFeature = item => {
-    // dispatch an action here to remove an item
-  };
-// reducer case
+
+  // const removeFeature = item => {
+  //   // dispatch an action here to remove an item
+  // };
+
   // const buyItem = item => {
   //   // dipsatch an action here to add an item
   // };
