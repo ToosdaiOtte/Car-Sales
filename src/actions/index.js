@@ -1,7 +1,8 @@
 export const ADD_FEATURE = 'ADD_FEATURE';
-export const addFeatureAC = item => {
-    console.log('actions, index.js, addFeature: ', item);
+
+export const addFeatureAC = feature => {
+    console.log('actions: index.js: addFeature: ', feature);
     return {
-        type: ADD_FEATURE, payload: item 
+        type: ADD_FEATURE, payload: feature
     };
 }

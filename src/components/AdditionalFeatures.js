@@ -6,11 +6,6 @@ import { addFeatureAC } from '../actions';
 
 const AdditionalFeatures = props => {
 
-  const buyItem = item => {
-
-    // dipsatch an action here to add an item
-  };
-
   return (
     <div className="content">
       <h4>Additional Features</h4>
@@ -18,7 +13,7 @@ const AdditionalFeatures = props => {
         <div>
         <ol type="1">
           {props.features.map(item => (
-            <AdditionalFeature key={item.id} feature={item} buyItem={buyItem} />
+            <AdditionalFeature key={item.id} feature={item} />
           ))}
         </ol>
         <div>
@@ -33,11 +28,11 @@ const AdditionalFeatures = props => {
 };
 
 const mapStateToProps = state => {
-  console.log('mSTP additionalFeatures state:', state.carState.store);
+  // console.log('mSTP additionalFeatures state:', state.carState.store);
   return {
-    carState: state.carState,
-    features: state.carState.store,
-    car: state.carState.car
+    carState: state,
+    features: state.store,
+    car: state.car
   };
 };
 

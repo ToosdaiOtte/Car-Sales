@@ -1,20 +1,18 @@
 import React from 'react';
 
 import AddedFeature from './AddedFeature';
-import { VirtualAction } from 'rxjs';
 
 const AddedFeatures = props => {
-  console.log(props);
-
-  const addedFeatures = props.car.features;
+  // console.log('AddFeatures: ', props);
 
   return (
     <div className="content">
       <h6>Added features:</h6>
-      {addedFeatures.length ? (
-        <ol type="1">
-          {props.features.map(item => (
+      {props.car.features.length ? ( 
+         <ol type="1">
+          {props.car.features.map(item => (
             <AddedFeature key={item.id} feature={item} />
+            // console.log(item)
           ))}
         </ol>
       ) : (

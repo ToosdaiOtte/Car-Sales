@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import AddedFeatures from './AddedFeatures';
 
 const Header = props => {
-  // console.log('Header.js: ', props);
+  console.log('Header.js: ', props);
 
 
   const car = props.car;
@@ -25,10 +25,10 @@ const Header = props => {
 };
 
 const mapStateToProps = state => {
-  // console.log('mSTP Car state:', state.carState)
+console.log('mSTP Car state:', state.carState);
   return {
-    car: state.carState.car,
-    features: state.carState.store
+    car: state.car,
+    features: state.store
   };
 };
 

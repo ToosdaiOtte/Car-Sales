@@ -22,10 +22,9 @@ export const CarReducer = (state = initialState, action) => {
     switch (action.type){
 
       case ADD_FEATURE:
-        console.log('inside addFeature: ', state)
+        console.log('carReducer: ADD_FEATURE: ', state);
         return {
-          ...state,
-          
+          ...state, 
           additionalPrice: state.additionalPrice += action.payload.price,
           car: {
             ...state.car,
@@ -34,7 +33,6 @@ export const CarReducer = (state = initialState, action) => {
               action.payload
             ]
           }
-
 
         };
 
